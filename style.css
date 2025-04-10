@@ -1,0 +1,216 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: #555;
+    display: flex ;
+    justify-content: center;
+    margin: 45px; /* Remove default margin */
+}
+
+.search input::placeholder {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.search input {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 100px auto 0;
+    transition: transform 0.3s ease;
+}
+
+.card h1 {
+    font-size: 36px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.search button:hover {
+    background: #00feba;
+    transform: scale(1.1);
+}
+
+.search button img {
+    width: 16px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.weather {
+    display: none;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.temp {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.city {
+    font-size: 32px;
+    margin-top: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.details .humidity,
+.details .wind {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+.details .humidity img,
+.details .wind img {
+    width: 24px;
+    margin-right: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+        margin: 50px auto 0;
+        padding: 15px;
+    }
+
+    .search input {
+        font-size: 16px;
+        padding: 8px 20px;
+        height: 50px;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    }
+
+    .weather-icon {
+        width: 140px;
+        margin-top: 20px;
+    }
+
+    .temp {
+        font-size: 48px;
+    }
+
+    .city {
+        font-size: 24px;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details .humidity,
+    .details .wind {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin: 30px auto 0;
+        padding: 10px;
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 6px 15px;
+        height: 40px;
+    }
+
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .weather-icon {
+        width: 120px;
+        margin-top: 15px;
+    }
+
+    .temp {
+        font-size: 36px;
+    }
+
+    .city {
+        font-size: 20px;
+    }
+
+    .details {
+        font-size: 16px;
+    }
+}
