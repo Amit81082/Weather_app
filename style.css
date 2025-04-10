@@ -195,6 +195,7 @@ body {
     .search button {
         width: 40px;
         height: 40px;
+        border-radius: 50%; /* Ensure the button remains round */
     }
 
     .weather-icon {
